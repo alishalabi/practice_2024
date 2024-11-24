@@ -21,10 +21,14 @@ From: https://edabit.com/challenge/xG2KB9T7mHgycGCSz
 """
 
 def valid(pin):
+    all_digits = ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9")
     if len(pin) not in (4,6):
         return False
-    if pin.isdigit() == False:
-        return False
+    # if pin.isdigit() == False:
+    #     return False
+    for digit in pin:
+        if digit not in all_digits:
+            return False
     return True
 
 print(valid("1234"))
