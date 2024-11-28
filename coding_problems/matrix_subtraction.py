@@ -32,9 +32,11 @@ def subtract_matrix(matrix1, matrix2):
     # Iterate through each cell of matrix
     for i in range(0, len(matrix1)):
         for j in range(0, len(matrix1[0])):
-            print(matrix1[i][j])
     # Perform subtraction operation
     # Populate return matrix
+            matrix3[i][j] = matrix1[i][j] - matrix2[i][j]
+    return matrix3
+
 
 
 print(subtract_matrix([
@@ -45,4 +47,14 @@ print(subtract_matrix([
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
+]))
+
+print(subtract_matrix([
+  [2, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+], [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 0]
 ]))
