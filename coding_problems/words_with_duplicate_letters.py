@@ -11,6 +11,8 @@ no_duplicate_letters("Look before you leap.") ➞ False
 
 no_duplicate_letters("An apple a day keeps the doctor away.") ➞ False
 # Duplicate letters in "apple", "keeps", "doctor", and "away".
+
+From: https://edabit.com/challenge/WS6hR6b9EZzuDTD26
 """
 
 def no_duplicate_letters(sentence):
@@ -18,12 +20,10 @@ def no_duplicate_letters(sentence):
     for word in word_array:
         all_letters = set()
         for letter in word:
-            # print(letter)
             if letter in all_letters:
                 return False
             else:
                 all_letters.add(letter)
-        # print(all_letters)
     return True
 
 print(no_duplicate_letters("Fortune favours the bold."))
