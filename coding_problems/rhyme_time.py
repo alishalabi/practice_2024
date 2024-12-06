@@ -1,5 +1,6 @@
 """
-Create a function that returns True if two lines rhyme and False otherwise. For the purposes of this exercise, two lines rhyme if the last word from each sentence contains the same vowels.
+Create a function that returns True if two lines rhyme and False otherwise. For the purposes of this exercise,
+two lines rhyme if the last word from each sentence contains the same vowels.
 
 Examples
 does_rhyme("Sam I am!", "Green eggs and ham.") ➞ True
