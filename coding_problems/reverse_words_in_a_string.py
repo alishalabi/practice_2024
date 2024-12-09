@@ -14,11 +14,13 @@ From: https://edabit.com/challenge/SfEretprfmbbcTChT
 def reverse_words(sentence):
     sentence_arr = sentence.strip().split(" ")
     ret = ""
-    for word in sentence_arr:
-        if word == " ":
-            sentence_arr.remove(word)
+    # for word in sentence_arr:
+    #     if word == " ":
+    #         sentence_arr.remove(word)
     for i in range(len(sentence_arr)):
-        ret += sentence_arr[len(sentence_arr) - i - 1] + " "
+        print(sentence_arr[i])
+        if sentence_arr[i] != " ":
+            ret += sentence_arr[len(sentence_arr) - i - 1] + " "
     return ret
 
 print(reverse_words("the sky is blue"))
