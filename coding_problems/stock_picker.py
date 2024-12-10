@@ -20,3 +20,25 @@ stock_picker([80, 60, 10, 8]) ➞ -1
 
 From: https://edabit.com/challenge/DqLngKnnJcZyPMctn
 """
+
+# Note: First example is exponential time complexity
+
+def stock_picker(arr):
+    if len(arr) < 2:
+        return "Error"
+    low_value = arr[0]
+    high_value = arr[1]
+    # for i in range(2, len(arr)):
+    for i in range(len(arr)):
+        for j in range(len(arr)):
+            if (arr[j] - arr[i]) > (high_value - low_value):
+                if arr[j] > high_value:
+                    high_value = arr[j]
+                else:
+                    low_value = arr[i]
+    # print(high_value)
+    # print(low_value)
+    return (high_value - low_value)
+
+print(stock_picker([10, 12, 4, 5, 9]))
+print(stock_picker([14, 20, 4, 12, 5, 11]))
