@@ -30,7 +30,7 @@ def stock_picker(arr):
     high_value = arr[1]
     # for i in range(2, len(arr)):
     for i in range(len(arr)):
-        for j in range(len(arr)):
+        for j in range(i, len(arr)):
             if (arr[j] - arr[i]) > (high_value - low_value):
                 if arr[j] > high_value:
                     high_value = arr[j]
