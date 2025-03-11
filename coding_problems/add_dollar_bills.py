@@ -21,7 +21,6 @@ def add_bill(string):
     for item in parsed_array:
         if item[0] == "d":
             if item[-1] == "k":
-                # print(item[1:-1])
                 ret += int(item[1:-1]) * 1000
             else:
                 ret += int(item[1:])
