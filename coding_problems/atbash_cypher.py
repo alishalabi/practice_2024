@@ -16,8 +16,6 @@ def atbash(string):
     lower_key = "abcdefghijklmnopqrstuvwxyz"
     upper_key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     for letter in string:
-        # if letter == " ":
-        #     ret += letter
         if letter in lower_key:
             new_index = 25 - lower_key.index(letter)
             ret += lower_key[new_index]
