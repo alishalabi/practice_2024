@@ -34,7 +34,7 @@ num_of_days(500, 300, 50) ➞ 4
 """
 
 def num_of_days(cost, savings, initial_amt):
-    days = 1
+    days = 0
     daily_saving = initial_amt
     total_saved = 0
     while total_saved + savings < cost:
@@ -48,3 +48,5 @@ def num_of_days(cost, savings, initial_amt):
     return days
 
 print(num_of_days(2050, 1200, 10))
+print(num_of_days(10000, 2500, 50))
+print(num_of_days(500, 300, 50))
