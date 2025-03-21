@@ -45,24 +45,28 @@ def collatz(n1, n2):
 
 # Using n iterations
 
-# def collatz(n1, n2):
-#     n1_current = n1
-#     n2_current = n2
-#     while n1_current != 1 and n2_current != 1:
-#         if n1_current == 1:
-#             return "a"
-#         elif n2_current == 1:
-#             return "b"
-#         else:
-#             if n1_current % 2 == 0:
-#                 n1_current = n1_current / 2
-#             else:
-#                 n1_current = (n1_current * 3) + 1
-#
-#             if n2_current % 2 == 0:
-#                 n2_current = n2_current / 2
-#             else:
-#                 n2_current = (n2_current * 3) + 1
+def collatz(n1, n2):
+    n1_current = n1
+    n2_current = n2
+    # print(n1_current)
+    # print(n2_current)
+    if n1_current == 1:
+        return "a"
+    if n2_current == 1:
+        return "b"
+
+    if n1_current % 2 == 0:
+        n1_current = n1_current / 2
+    else:
+        n1_current = (n1_current * 3) + 1
+
+    if n2_current % 2 == 0:
+        n2_current = n2_current / 2
+    else:
+        n2_current = (n2_current * 3) + 1
+
+    return collatz(n1_current, n2_current)
+
 
 
 print(collatz(10, 15))
