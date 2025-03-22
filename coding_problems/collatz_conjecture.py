@@ -48,8 +48,6 @@ def collatz(n1, n2):
 def collatz(n1, n2):
     n1_current = n1
     n2_current = n2
-    # print(n1_current)
-    # print(n2_current)
     if n1_current == 1:
         return "a"
     if n2_current == 1:
