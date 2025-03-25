@@ -13,10 +13,10 @@ def remove_letters(arr, word):
     ret = []
     my_word = word
     # removed = []
+
     for letter in arr:
         if letter in my_word:
             my_word.replace(letter, "", 1)
-            print(my_word)
         else:
             ret.append(letter)
     return ret
