@@ -27,17 +27,31 @@ def is_valid_even_odd(item1, item2):
     else:
         return False
 
+#
+# def longest_substring(input):
+#     ret = input[0]
+#     for i in range(len(input) - 1):
+#         current_substring = input[i]
+#         if is_valid_even_odd(input[i], input[i+1]) == True:
+#             current_substring += input[i+1]
+#             if len(current_substring) > len(ret):
+#                 ret = current_substring
+#         else:
+#             pass
+#     return ret
 
 def longest_substring(input):
     ret = input[0]
+    current_substring = input[0]
     for i in range(len(input) - 1):
-        current_substring = input[i]
-        if is_valid_even_odd(input[i], input[i+1]) == True:
-            current_substring += input[i+1]
+        if is_valid_even_odd(input[i], input[i + 1]) == True:
+            current_substring += input[i + 1]
             if len(current_substring) > len(ret):
                 ret = current_substring
         else:
-            pass
+            current_substring = input[i + 1]
     return ret
 
 print(longest_substring("225424272163254474441338664823"))
+print(longest_substring("594127169973391692147228678476"))
+print(longest_substring("721449827599186159274227324466"))
