@@ -27,7 +27,6 @@ def nearest_chapter(chapter_map, page):
     lookup_map = {}
     for key in chapter_map:
         lookup_map[chapter_map[key]] = key
-    print(lookup_map)
     chapter_array = []
     for key in chapter_map:
         chapter_array.append(chapter_map[key])
@@ -35,11 +34,10 @@ def nearest_chapter(chapter_map, page):
     chapter_index = 0
     while page > chapter_array[chapter_index]:
         chapter_index += 1
-    print(chapter_index)
     if abs(page - chapter_array[chapter_index]) > abs(page - chapter_array[chapter_index - 1]):
-        return lookup_map[chapter_index - 1]
+        return lookup_map[chapter_array[chapter_index - 1]]
     else:
-        return lookup_map[chapter_index]
+        return lookup_map[chapter_array[chapter_index]]
 
 
 print(nearest_chapter({
@@ -49,9 +47,14 @@ print(nearest_chapter({
 
 }, 10) )
 
-# print(nearest_chapter({
-#   "New Beginnings" : 1,
-#   "Strange Developments" : 62,
-#   "The End?" : 194,
-#   "The True Ending" : 460
-# }, 200) ➞ "The End?")
+print(nearest_chapter({
+  "New Beginnings" : 1,
+  "Strange Developments" : 62,
+  "The End?" : 194,
+  "The True Ending" : 460
+}, 200))
+
+print(nearest_chapter({
+  "Chapter 1a" : 1,
+  "Chapter 1b" : 5
+}, 3))
